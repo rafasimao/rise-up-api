@@ -5,7 +5,7 @@ ruby '2.6.5'
 
 gem 'rails', '~> 6.0.1'
 
-gem 'rack', '~> 2.2.2'
+gem 'rack', '~> 2.2.3'
 gem 'pg', '~> 1.2.3'
 gem 'puma', '~> 4.3.5'
 gem 'bootsnap', '>= 1.4.2', require: false
