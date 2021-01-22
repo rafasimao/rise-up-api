@@ -1,24 +1,26 @@
-# README
+#README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Application
 
-Things you may want to cover:
+This app is a self management tool designed to increase produtivity while motivating through acknowledging each step you take foward to your goals.
 
-* Ruby version
 
-* System dependencies
+## Design
 
-* Configuration
+### Features
 
-* Database creation
+##### v0.1.0
+- Tasks
+- List of tasks (Notes)
+- Set tasks to a todo_date (date to execute that task)
+- Get tasks by list(Note)
+- Get tasks agregated by todo_date
+- Get all tasks with todo_date already passed
 
-* Database initialization
 
-* How to run the test suite
+### Apis
 
-* Services (job queues, cache servers, search engines, etc.)
+- POST /tasks (create)
+  - create a task with a given description
 
-* Deployment instructions
-
-* ...
+### Architecture

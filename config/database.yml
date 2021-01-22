@@ -5,9 +5,9 @@ default: &default
   port: <%= ENV['API_PORT'] %>
   username: <%= ENV['API_USERNAME'] %>
   password: <%= ENV['API_PASSWORD'] %>
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: <%= ENV.fetch('RAILS_MAX_THREADS') { 5 } %>
   variables:
-    statement_timeout: <%= ENV.fetch("API_DATABASE_TIMEOUT") { 10000 } %>
+    statement_timeout: <%= ENV.fetch('API_DATABASE_TIMEOUT') { 10000 } %>
 
 development:
   <<: *default

@@ -1,4 +1,4 @@
-FROM ruby:2.6.5-alpine
+FROM ruby:2.6.6-alpine
 
 RUN apk update && \
     apk add --no-cache --virtual \
@@ -7,9 +7,14 @@ RUN apk update && \
       build-base \
       postgresql-dev
 
-RUN mkdir /app
 WORKDIR /app
 
 RUN gem install bundler
 
-CMD ["./docker-entrypoint.sh"]
+COPY Gemfile Gemfile.lock /app/
+
+RUN bundle install --jobs $(nproc)
+
+ADD . /app
+
+ENTRYPOINT ["./docker-entrypoint.sh"]
