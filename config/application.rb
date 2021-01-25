@@ -13,7 +13,10 @@ Bundler.require(*Rails.groups)
 
 module Api
   class Application < Rails::Application
-    config.load_defaults 6.0
+    config.load_defaults 6.1
     config.api_only = true
+    config.active_record.schema_format = :sql
+
+    config.autoload_paths << Rails.root.join('app/services/**/')
   end
 end
