@@ -5,6 +5,7 @@ RUN apk update && \
       git \
       bash \
       build-base \
+      postgresql-client \
       postgresql-dev
 
 WORKDIR /app
