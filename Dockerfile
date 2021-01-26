@@ -2,8 +2,7 @@ FROM ruby:2.6.6-alpine
 
 RUN apk update && \
     apk add --no-cache --virtual \
-      git \
-      bash \
+      git bash less \
       build-base \
       postgresql-client \
       postgresql-dev
