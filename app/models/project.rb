@@ -1,4 +1,6 @@
 class Project < ApplicationRecord
+  include Progressable
+  
   belongs_to :user
   belongs_to :progress, optional: true
   belongs_to :area, optional: true
