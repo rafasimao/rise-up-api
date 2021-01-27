@@ -1,6 +1,8 @@
 class Progress < ApplicationRecord
+  include Progressable
+  
   has_one :area
   has_one :project
 
-  enum type: { tasks: 'tasks', experience: 'experience' }
+  enum track_type: { tasks: 'tasks', experience: 'experience' }
 end
