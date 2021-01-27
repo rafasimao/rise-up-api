@@ -5,7 +5,7 @@ class CreateProgresses < ActiveRecord::Migration[6.1]
     SQL
 
     create_table :progresses do |t|
-      t.column :type, :progress_type, index: true
+      t.column :track_type, :progress_type, index: true
       t.boolean :auto, default: true, null: false
       t.integer :amount
       t.integer :max

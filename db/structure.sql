@@ -75,7 +75,7 @@ ALTER SEQUENCE public.areas_id_seq OWNED BY public.areas.id;
 
 CREATE TABLE public.progresses (
     id bigint NOT NULL,
-    type public.progress_type,
+    track_type public.progress_type,
     auto boolean DEFAULT true NOT NULL,
     amount integer,
     max integer,
@@ -330,10 +330,10 @@ CREATE INDEX index_areas_on_user_id ON public.areas USING btree (user_id);
 
 
 --
--- Name: index_progresses_on_type; Type: INDEX; Schema: public; Owner: -
+-- Name: index_progresses_on_track_type; Type: INDEX; Schema: public; Owner: -
 --
 
-CREATE INDEX index_progresses_on_type ON public.progresses USING btree (type);
+CREATE INDEX index_progresses_on_track_type ON public.progresses USING btree (track_type);
 
 
 --
