@@ -7,7 +7,7 @@ gem 'rails', '~> 6.1.1'
 
 gem 'rack', '~> 2.2.2'
 gem 'pg', '~> 1.2.3'
-gem 'puma', '~> 5.1.1'
+gem 'puma', '~> 5.6.4'
 gem 'bootsnap', '>= 1.5.1', require: false
 
 group :development, :test do
